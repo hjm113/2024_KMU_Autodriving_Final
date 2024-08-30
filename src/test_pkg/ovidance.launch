@@ -1,0 +1,15 @@
+<launch> 
+
+  <!-- motor node -->
+  <include file="$(find xycar_motor)/launch/xycar_motor.launch" />
+
+  <!-- Lidar node -->
+  <include file="$(find xycar_lidar)/launch/xycar_lidar.launch" />
+
+  <!-- Ultrasonic sensor node -->
+  <include file="$(find xycar_ultrasonic)/launch/xycar_ultrasonic.launch" />
+ 
+  <!-- Tracking node -->
+  <node name="driver" pkg="track_drive" type="obstacle_ovidance.py" output="screen" />
+  
+</launch> 
