@@ -1,0 +1,8 @@
+<launch> 
+
+  <!-- motor node -->
+  <include file="$(find xycar_motor)/launch/xycar_motor.launch" />
+
+  <!-- <node name="start" pkg="track_drive" type="start.py"/> -->
+  <node name="align_car" pkg="track_drive" type="align.py" />
+</launch>
